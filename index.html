@@ -38,13 +38,28 @@
             type="text"
             id="task-name"
           />
-          <small class="task-form__error">Something went wrong</small>
-          <button class="task-form__btn">Add</button>
         </div>
+        <div>
+          <label class="task-form__label" for="task-date">Set date</label>
+          <input
+            class="task-form__date"
+            autocomplete="off"
+            type="date"
+            id="task-date"
+          />
+          <small class="task-form__error">Something went wrong</small>
+        </div>
+        <button class="task-form__btn">Add</button>
       </form>
     </dialog>
-
+    <div class="error">
+      <h2 class="error__title">Something went wrong!</h2>
+      <p class="error__text">Make sure there are some tasks on your list</p>
+    </div>
     <main class="container">
+      <div class="tasks-counter">
+        <p class="tasks-counter__amount">0</p>
+      </div>
       <section class="section-controls">
         <h1 class="section-controls__title">HypeMind</h1>
         <div class="buttons-controls">
@@ -66,20 +81,6 @@
             </div>
           </div>
           <p class="task__text">Zakupy</p>
-        </div>
-        <div class="task">
-          <div class="task-controls">
-            <p class="task__date">12/02/2024</p>
-            <div class="task-buttons">
-              <button class="task-buttons__btn done-task"
-                ><i class="fa-solid fa-check"></i
-              ></button>
-              <button class="task-buttons__btn delete-task"
-                ><i class="fa-solid fa-xmark"></i
-              ></button>
-            </div>
-          </div>
-          <p class="task__text">Wyrzucić śmieci</p>
         </div> -->
       </section>
     </main>
