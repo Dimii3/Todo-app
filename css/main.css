@@ -1,1 +1,191 @@
-/*# sourceMappingURL=main.css.map */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/img/todo-background.jpg");
+  background-size: cover;
+  background-position: center;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.add-task-modal {
+  padding: 2rem;
+  position: absolute;
+  min-width: 30rem;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  animation: SlideDown 0.5s forwards;
+}
+.add-task-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+.add-task-modal__title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #de5969;
+}
+.add-task-modal .close-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.add-task-modal .close-modal__btn {
+  font-size: 2.5rem;
+  border: none;
+  background-color: transparent;
+  padding: 1rem;
+  color: #de5969;
+}
+.add-task-modal .close-modal__btn:active {
+  transform: scale(1.1);
+}
+.add-task-modal .task-form {
+  padding: 1rem;
+}
+.add-task-modal .task-form div {
+  display: flex;
+  flex-direction: column;
+}
+.add-task-modal .task-form__label {
+  color: #1e1e1e;
+}
+.add-task-modal .task-form__input {
+  margin: 1rem 0;
+  padding: 0.7rem 0.4rem;
+  font-family: inherit;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.add-task-modal .task-form__btn {
+  align-self: flex-start;
+  padding: 0.7rem 2.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: #59de9e;
+  color: #dedede;
+}
+.add-task-modal .task-form__btn:active {
+  transform: scale(1.1);
+}
+
+.container {
+  background-color: rgba(222, 222, 222, 0.1254901961);
+  min-width: 120rem;
+  min-height: 65rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 0.8rem;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-controls {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 6rem;
+  align-items: center;
+  padding: 0 3rem;
+  border-bottom: 2px solid #dedede;
+}
+.section-controls__title {
+  font-size: 2rem;
+  color: #de5969;
+}
+.section-controls .buttons-controls {
+  display: flex;
+  gap: 2rem;
+}
+.section-controls .buttons-controls__btn {
+  padding: 0.7rem 2.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  color: #dedede;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.section-controls .buttons-controls__btn:active {
+  transform: scale(0.95);
+}
+
+.clear-btn {
+  background-color: #de5969;
+}
+
+.delete-task {
+  color: #de5969;
+}
+
+.add-new-btn {
+  background-color: #59de9e;
+}
+
+.done-task {
+  color: #59de9e;
+}
+
+.tasks {
+  padding: 4rem 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+.tasks .task {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.4rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.tasks .task .task-controls {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+.tasks .task .task-controls .task-buttons {
+  display: flex;
+  gap: 2rem;
+}
+.tasks .task .task-controls .task-buttons__btn {
+  background: none;
+  border: none;
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+.tasks .task .task-controls .task-buttons__btn:active {
+  transform: scale(1.1);
+}
+
+@keyframes SlideDown {
+  0% {
+    transform: translate(-50%, -500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */
