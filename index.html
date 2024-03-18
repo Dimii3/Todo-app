@@ -32,7 +32,13 @@
       <form class="task-form">
         <div>
           <label class="task-form__label" for="task-name">Enter task</label>
-          <input class="task-form__input" type="text" id="task-name" />
+          <input
+            class="task-form__input"
+            autocomplete="off"
+            type="text"
+            id="task-name"
+          />
+          <small class="task-form__error">Something went wrong</small>
           <button class="task-form__btn">Add</button>
         </div>
       </form>
@@ -47,7 +53,7 @@
         </div>
       </section>
       <section class="tasks">
-        <div class="task">
+        <!-- <div class="task">
           <div class="task-controls">
             <p class="task__date">12/02/2024</p>
             <div class="task-buttons">
@@ -74,7 +80,7 @@
             </div>
           </div>
           <p class="task__text">Wyrzucić śmieci</p>
-        </div>
+        </div> -->
       </section>
     </main>
   </body>

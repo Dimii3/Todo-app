@@ -21,6 +21,10 @@ body {
   font-family: "Press Start 2P", system-ui;
 }
 
+i {
+  pointer-events: none;
+}
+
 .add-task-modal {
   padding: 2rem;
   position: absolute;
@@ -91,7 +95,8 @@ body {
 
 .container {
   background-color: rgba(222, 222, 222, 0.1254901961);
-  min-width: 120rem;
+  width: 120rem;
+  max-width: 120rem;
   min-height: 65rem;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -108,6 +113,15 @@ body {
   padding: 0 3rem;
   border-bottom: 2px solid #dedede;
 }
+@media (max-width: 576px) {
+  .section-controls {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+  }
+}
 .section-controls__title {
   font-size: 2rem;
   color: #de5969;
@@ -115,6 +129,11 @@ body {
 .section-controls .buttons-controls {
   display: flex;
   gap: 2rem;
+}
+@media (max-width: 576px) {
+  .section-controls .buttons-controls {
+    flex-direction: column;
+  }
 }
 .section-controls .buttons-controls__btn {
   padding: 0.7rem 2.5rem;
@@ -134,7 +153,8 @@ body {
   background-color: #de5969;
 }
 
-.delete-task {
+.delete-task,
+.task-form__error {
   color: #de5969;
 }
 
@@ -177,6 +197,19 @@ body {
 }
 .tasks .task .task-controls .task-buttons__btn:active {
   transform: scale(1.1);
+}
+
+.task-form__error {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.task-form__error.show {
+  display: block;
+}
+
+.task.done {
+  opacity: 0.4;
 }
 
 @keyframes SlideDown {
