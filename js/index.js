@@ -37,7 +37,7 @@ const renderTasks = () => {
       </div>`;
     tasksList.insertAdjacentHTML("afterbegin", taskHTML);
   });
-  amountOfTasks.textContent = stateApp.tasks.length;
+  amountOfTasks.textContent = stateApp.tasks.length || 0;
 };
 
 const handleError = (msg) => {
@@ -121,6 +121,7 @@ clearBtn.addEventListener("click", clearTasks);
 addTaskBtn.addEventListener("click", createTask);
 
 window.addEventListener("DOMContentLoaded", () => {
+  if (!localStorage.getItem("tasks")) return;
   const savedTasks = localStorage.getItem("tasks");
   stateApp.tasks = JSON.parse(savedTasks);
   renderTasks();
