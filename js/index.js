@@ -20,7 +20,7 @@ showModalBtn.addEventListener("click", () => {
 
 const renderTasks = () => {
   tasksList.innerHTML = "";
-  stateApp.tasks.forEach((task) => {
+  stateApp.tasks?.forEach((task) => {
     const taskHTML = ` <div id=${task.id} class="task ${task.isDone && "done"}">
         <div class="task-controls">
           <p class="task__date">${task.taskDate}</p>
@@ -81,9 +81,9 @@ const createTask = (event) => {
     isDone: false,
   };
   stateApp.tasks.push(task);
-  renderTasks();
   inputTask.value = "";
   inputDate.value = "";
+  renderTasks();
   taskID++;
   addTaskModal.close();
   localStorage.setItem("tasks", JSON.stringify(stateApp.tasks));
